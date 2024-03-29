@@ -56,8 +56,9 @@ header > nav > .menu-icon {
 
 header > h1:hover,
 header > nav > .menu-icon:hover,
+header > nav > ul > li > a:hover,
 footer:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 header > nav > .menu-icon i {
