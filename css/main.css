@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+html {
+  font-size: 1em;
+}
+
+hmtl,
+body {
+  min-height: 100vh;
+}
+
+header,
+header > nav > ul,
+div,
+div > main,
+main > section {
+  display: flex;
+}
+
+header {
+  padding: 28px;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  background-color: #092437;
+}
+
+header > nav > #menuCheckbox {
+  display: none;
+}
+
+header > h1,
+header > nav > .menu-icon,
+header > nav > ul > li > a {
+  color: #dcdcdc;
+  text-transform: uppercase;
+}
+
+header > nav > .menu-icon {
+  width: 50px;
+  height: inherit;
+  top: 36px;
+  right: 10px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+header > h1:hover,
+header > nav > .menu-icon:hover,
+footer:hover {
+  color: #ffffff;
+}
+
+header > nav > .menu-icon i {
+  font-size: 1.8em;
+}
+
+#menuCheckbox:checked ~ label i:first-child {
+  display: none;
+}
+
+#menuCheckbox:checked ~ label i:nth-child(2) {
+  display: block;
+}
+
+#menuCheckbox:not(checked) ~ label i:first-child {
+  display: block;
+}
+
+#menuCheckbox:not(checked) ~ label i:nth-child(2) {
+  display: none;
+}
+
+#menuCheckbox:checked ~ ul {
+  height: 100%;
+}
+
+header > nav > ul {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 0;
+  position: fixed;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.3s;
+}
+
+header > nav > ul > li,
+header > nav > ul > li > a {
+  width: 100%;
+  display: block;
+}
+
+header > nav > ul > li {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+header > nav > ul > li > a {
+  text-align: center;
+  text-decoration: none;
+}
+
+header > nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.wrapper,
+div > main,
+div > main > section.card,
+section.card > div {
+  flex-flow: column;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 24px;
+  gap: 2rem;
+}
+
+div > aside {
+  margin-top: 90px;
+}
+
+div > aside > section > h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+div > aside > section > ul {
+  list-style: none;
+}
+
+div > aside > section > ul > li {
+  padding: 16px;
+  border: 1px solid #a8a7a7;
+}
+
+div > aside > section > ul > li:nth-child(2),
+li:nth-child(3) {
+  border-top: none;
+}
+
+div > aside > section > ul > li > a {
+  text-decoration: none;
+  color: #00a8c6;
+}
+
+div > aside > section > ul > li > a:hover {
+  color: #1d82bf;
+  text-decoration: underline;
+}
+
+div > main {
+  gap: 2rem;
+}
+
+div img {
+  display: block;
+  max-width: 100%;
+}
+
+div > main > section.card {
+  gap: 1rem;
+  border: 1px solid #dcdcdc;
+}
+
+div > main > section.card > div > h3 {
+  color: #00a8c6;
+}
+
+section.card > div {
+  gap: 0.5rem;
+  padding: 24px;
+  line-height: 1.8rem;
+}
+
+section.card > div > span {
+  font-weight: bold;
+}
+
+footer {
+  padding: 32px;
+  width: 100%;
+  text-align: center;
+  background-color: #036564;
+  color: #dcdcdc;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header > nav > .menu-icon {
+    display: none;
+  }
+
+  header > nav > ul {
+    width: 460px;
+    height: 100%;
+    position: relative;
+    flex-flow: row;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    background-color: #092437;
+  }
+
+  header > nav > ul > li {
+    margin-bottom: 0;
+    width: min-content;
+  }
+
+  .wrapper {
+    width: 90%;
+    flex-flow: row;
+    margin: 0 auto;
+  }
+
+  div > aside {
+    width: 20%;
+  }
+
+  div > main {
+    width: 80%;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.25rem;
+  }
+
+  div > main > .banner {
+    grid-column: 1/4;
+  }
+}
